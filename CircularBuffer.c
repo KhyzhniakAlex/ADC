@@ -44,7 +44,7 @@ int freeCircularBuffer (circularBuffer_t *CBPtr) {
 	put an int to the circular buffer tail pointer, if the buffer is full,
 	ignore the put and return -1, otherwise add to tail, return 0;
 */
-int put (circularBuffer_t *CBPtr, int value) {
+int buffer_add (circularBuffer_t *CBPtr, int value) {
 	if (CBPtr == 0) {
 	
 		return -1;
@@ -61,7 +61,7 @@ int put (circularBuffer_t *CBPtr, int value) {
 
 }
 
-int get (circularBuffer_t *CBPtr, int *value) {
+int buffer_read (circularBuffer_t *CBPtr) {
 	if (CBPtr == 0) {
 		
 		return -1;
@@ -72,13 +72,13 @@ int get (circularBuffer_t *CBPtr, int *value) {
 	}
 	
 	//get value from head
-	*value = *CBPtr->head++;
+	// *value = *CBPtr->head++;
 	
 	//if reach the end of the buffer, move head to buffer start
     if(CBPtr->head == CBPtr->bufferEnd) {
        CBPtr->head = CBPtr->buffer;
     }
-    return 0;
+    return *CBPtr->head++;
 }
 
 

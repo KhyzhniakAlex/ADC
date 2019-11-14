@@ -17,7 +17,7 @@ int freeCircularBuffer (circularBuffer_t *CBPtr);
 
 int put (circularBuffer_t *CBPtr, int value);
 
-int get (circularBuffer_t *CBPtr, int *value);
+int get (circularBuffer_t *CBPtr);
 
 int getCircularBufferCount (circularBuffer_t  *CBPtr);
 
