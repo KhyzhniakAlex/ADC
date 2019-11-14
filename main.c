@@ -13,7 +13,7 @@
 //// Two GPIO for SPI emul //GPIO_Pin_6|GPIO_Pin_7;//GPIOB
 
 
-//A3 - ADC
+//A1 - ADC
 
 
 
